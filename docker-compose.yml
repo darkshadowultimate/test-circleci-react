@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  frontend:
+    container_name: "test-react-docker"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: frontend:tag
+    ports:
+      - "5500:3000"
+    stdin_open: true
